@@ -182,7 +182,9 @@ Enter choice 1-9: 6
 Students sorted by average:
 
 Shannel: 80.0
+
 Arifa: 50.0
+
 Lemy: 20.0
 
 
@@ -193,7 +195,9 @@ Subject: Math
 Students sorted by Math:
 
 Shannel: 80.0
+
 Arifa: 50.0
+
 Lemy: 30.0
 
 
