@@ -1,24 +1,27 @@
-# Section E
+# Section E : OOP
 
-# Class Student
+# Class Student representing a single student, holding theri name and subject 
 class Student:
     def __init__(self, name):
-        self.name, self.grades = name, {}
+        self.name, self.grades = name, {} #dictionary to store subject 
 
     def add_grade(self, subject, grade):
+        # adds or update for subject 
         self.grades[subject] = grade
 
     def average(self):
+        #calculate the average if any grades available 
         return sum(self.grades.values()) / len(self.grades) if self.grades else 0
 
     def details(self):
+        #display student gardes and average 
         print(f"{self.name}: {self.grades}, Avg: {self.average():}")
 
-# class Gradebook
+# class Gradebook management fro collection of student objects and operates on them
 class Gradebook:
     def __init__(self, subjects):
-        self.subjects = subjects
-        self.students = {}
+        self.subjects =  subjects #list of available subjects 
+        self.students = {} #dictionary to store student name : student object 
 
     @staticmethod
     def input_grade(s):
@@ -31,7 +34,7 @@ class Gradebook:
             except ValueError:
                 print("Invalid input")
 
-    # Add student
+    #  method :Add student
     def add_student(self):
         name = input("Input student name: ").strip()
         added_status = False
@@ -40,24 +43,24 @@ class Gradebook:
             print("Cannot add student")
             return False
 
-        if name not in self.students:
+        if name not in self.students:  #avoild duplicates 
             s = Student(name)
-            for subject in self.subjects:
+            for subject in self.subjects: #add grades for all subjects 
                 s.add_grade(subject, self.input_grade(subject))
-            self.students[name] = s
+            self.students[name] = s  #save student object 
             added_status = True
 
         print("Student added!" if added_status else "student already exists!")
         return added_status
 
-    # Update student
+    # method: Update student
     def update_student(self):
         name = input("Update which student name?: ").strip()
         update_status = False
 
         if name in self.students:
             s = self.students[name]
-            s.grades = {}
+            s.grades = {} #clear existing grades 
             for subject in self.subjects:
                 s.add_grade(subject, self.input_grade(subject))
             update_status = True
@@ -65,7 +68,7 @@ class Gradebook:
         print("Student updated!" if update_status else "student not found!")
         return update_status
 
-    # Remove student
+    #method: Remove student
     def remove_student(self):
         name = input("Remove which student name: ")
         removed_status = False
@@ -81,7 +84,7 @@ class Gradebook:
         print("Student removed!" if removed_status else " student not found!")
         return removed_status
 
-    # Search for student
+    # method: Search for student
     def search_student(self):
         name = input("Student name to search: ").strip()
         found_status = False
@@ -91,13 +94,13 @@ class Gradebook:
             return False
 
         if name in self.students:
-            self.students[name].details()
+            self.students[name].details()  #display details 
             found_status = True
 
         print("Student found!" if found_status else " student not found!")
         return found_status
 
-    # View grades by subject
+    # method: View grades by subject
     def view_by_subject(self):
         subject = input("Input subject name: ").capitalize()
         found_status = False
@@ -115,7 +118,7 @@ class Gradebook:
         print("Subject found!" if found_status else "Cannot view: subject not found!")
         return found_status
 
-    # Sort students by average
+    #method: Sort students by average
     def sort_by_average(self):
         if not self.students:
             print("Student not found")
@@ -126,7 +129,7 @@ class Gradebook:
             print(f"{s.name}: {s.average():.2f}")
         return True
 
-    # Sort by specific subject
+    # method :Sort by specific subject
     def sort_by_subject(self, subject):
         if not self.students:
             print("No subject data.")
@@ -141,33 +144,34 @@ class Gradebook:
             print(f"{s.name}: {s.grades.get(subject, 'No grade awarded')}")
         return True
 
-    # Display all results
+    # method: Display all results
     def display_results(self):
         if not self.students:
             print("No student data.")
             return
-
+#display all student details 
         for s in self.students.values():
             s.details()
-
+#calculate and siplay overall class average 
         class_avg = sum(s.average() for s in self.students.values()) / len(self.students)
         print(f"Class avg: {class_avg:}")
-
+#display max and min of grades for every subject 
         for subj in self.subjects:
             scores = [s.grades[subj] for s in self.students.values() if subj in s.grades]
             if scores:
                 print(f"{subj}: Max={max(scores)}, Min={min(scores)}")
-
+# Main driver function 
 def main():
     subjects = ["Math", "English", "Science"]
     book = Gradebook(subjects)
 
     try:
+        #initial data by adding students 
         for _ in range(int(input("Enter number of students in a class: "))):
             book.add_student()
     except ValueError:
         print("Invalid number.")
-
+#menu loop 
     while True:
         print ("\n1= Add Student "           
                "\n2= Update Student  "  
@@ -200,4 +204,5 @@ def main():
         else:
             print("Invalid choice , please try again.")
 
+#run program 
 main()
