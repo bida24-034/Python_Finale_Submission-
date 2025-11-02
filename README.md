@@ -1,4 +1,4 @@
-# Python_Finale_Submission
+# Python Student Grade Management System 
 
 # Project Overview
 
@@ -9,11 +9,17 @@ This system developed continuosly, starting with basic input processing and loop
 # Objectives
 
 -**Digital Grade Management: Provide a system to store and manage student grades .
+
 -**Create , delete, update and read  Operations: Enable users to Create, Read, Update, and Delete student records.
+
 -**Data Validation: Ensure input is valid and within expected ranges.
+
 -**Error Handling: Handle errors such as duplicate students, missing subjects, or invalid inputs with the use of custom exceptions.
+
 -**Analysis & Sorting: Calculate averages, class statistics, and allow sorting by name, subject, or overall average.
+
 -**Modular & Maintainable Code: Use functions, classes, and clear code structure for easy readability and maintenance.
+
 -**Testing: Verify that all functionalities work correctly through multiple test cases for normal and edge cases.
 
 # Section Descriptions and Integration
@@ -39,26 +45,41 @@ Added robust error handling with custom exceptions, plus sorting and searching a
 # How to Run the Program (PyCharm IDE)
 
 -**Make sure a Python IDE environment is installed on your computer.
+
 -**Recommended: Latest version of PyCharm .
+
 -**Open the folder containing the program.
+
 -**It should open directly in PyCharm.
 
  ## Run the program by either:
 
 - **Selecting Run → ‘Shannel_Selogilwe_SectionF.py’ Or pressing Shift + F10.
+  
 -**Follow the Prompts
+
 -**Enter the number of students.
+
 -**Add grades for each student when prompted.
+
 -**Use the menu options to:
 
 1.Add a student
+
 2.Update student grades
+
 3.Remove a student
+
 4.View grades by subject
+
 5.Search for a student
+
 6.Sort by average
+
 7.Sort by subject
+
 8.Sort by name
+
 9.Display results
 
 -**Exit the Program
@@ -71,9 +92,13 @@ Choose option 9 to display all results and automatically end the program.
 Enter number of students in a class: 2
 
 Input student name: Shannel
+
 Enter Math grade between 0 and 100: 80
+
 Enter English grade between 0 and 100: 90
+
 Enter Science grade between 0 and 100: 70
+
 Student added!
 
 Input student name: Arifa
