@@ -54,7 +54,7 @@ Added robust error handling with custom exceptions, plus sorting and searching a
 
  ## Run the program by either:
 
-- **Selecting Run → ‘Shannel_Selogilwe_SectionF.py’ Or pressing Shift + F10.
+- **Selecting Run = ‘Shannel_Selogilwe_SectionF.py’ Or pressing Shift + F10.
   
 -**Follow the Prompts
 
