@@ -112,24 +112,24 @@
 # Section F
 
 # Custom Exceptions
-class StudentNotFoundError(Exception): pass
-class InvalidGradeError(Exception): pass
-class EmptyGradebookError(Exception): pass
-class DuplicateStudentError(Exception): pass
-class SubjectNotFound(Exception): pass
+class StudentNotFoundError(Exception): pass #raised when a student does not exist 
+class InvalidGradeError(Exception): pass #raised for invalid input or empty fields 
+class EmptyGradebookError(Exception): pass #raised when gradebook has no students 
+class DuplicateStudentError(Exception): pass #raised when trying to add an already existing student
+class SubjectNotFound(Exception): pass # raised when a subject entered is invalid 
 
 
 # Class Student
 class Student:
     def __init__(self, name):
         self.name, self.grades = name, {}
-
+#add grades per subject 
     def add_grade(self, subject, grade):
         self.grades[subject] = grade
-
+#calculate avearge 
     def average(self):
         return sum(self.grades.values()) / len(self.grades) if self.grades else 0
-
+#display student details 
     def details(self):
         print(f"{self.name}: {self.grades}, Avg: {self.average():}")
 
@@ -142,6 +142,7 @@ class Gradebook:
 
     @staticmethod
     def input_grade():
+        #validate user input for grades 
         while True:
             try:
                 g = float(input("Enter grade between 0 and 100: "))
@@ -175,14 +176,14 @@ class Gradebook:
         try:
             name = input("Update which student name?: ").strip()
             if name not in self.students:
-                raise StudentNotFoundError("Student not found!")
+                raise StudentNotFoundError("Student not found!") #raised when student is not found 
 
             s = self.students[name]
             s.grades = {}
             for subject in self.subjects:
                 s.add_grade(subject, self.input_grade())
 
-            print("Student updated!")
+            print("Student updated!") #student grades are updated 
             return True
 
         except StudentNotFoundError as e:
@@ -210,16 +211,17 @@ class Gradebook:
         try:
             name = input("Student name to search: ").strip()
             if not name:
-                raise InvalidGradeError("Name cannot be empty!")
+                raise InvalidGradeError("Name cannot be empty!") #either input is empty of wrong and it will be raised 
             if name not in self.students:
-                raise StudentNotFoundError("Student not found!")
-
+                raise StudentNotFoundError("Student not found!") #raised if student is not found 
+#display student details if found 
             self.students[name].details()
             return True
 
         except (InvalidGradeError, StudentNotFoundError) as e:
             print(e)
             return False
+            
 #view by subject
     def view_by_subject(self):
         try:
@@ -243,6 +245,7 @@ class Gradebook:
         try:
             if not self.students:
                 raise EmptyGradebookError("No students found!")
+                #sorted by average descending 
             ranked = sorted(self.students.values(), key=lambda x: x.average(), reverse=True)
             print("Students sorted by average:")
             for s in ranked:
@@ -253,6 +256,7 @@ class Gradebook:
         except EmptyGradebookError as e:
             print(e)
             return False
+            
 #sort by subject
     def sort_by_subject(self, subject):
         try:
@@ -261,7 +265,7 @@ class Gradebook:
                 raise EmptyGradebookError("No students found!")
             if subject not in self.subjects:
                 raise SubjectNotFound(f"Subject '{subject}' not found!")
-
+#sorted based on grades for chosen subject 
             ranked = sorted(self.students.values(), key=lambda x: x.grades.get(subject, 0), reverse=True)
             print(f"Students sorted by {subject}:")
 
@@ -273,12 +277,13 @@ class Gradebook:
         except (EmptyGradebookError, SubjectNotFound) as e:
             print(e)
             return False
-#sort by name and use bubble sort
+            
+#sort by name , these names will follow the alphatetic order 
     def sort_by_name(self):
         try:
             if not self.students:
                 raise EmptyGradebookError("No students to sort!")
-
+#use the bubble sort manually 
             students_list = list(self.students.values())
             n = len(students_list)
 
@@ -306,7 +311,7 @@ class Gradebook:
 
         for s in self.students.values():
             s.details()
-
+#calculate class average and subject statistics 
         class_avg = sum(s.average() for s in self.students.values()) / len(self.students)
         print(f"Class avg: {class_avg:}")
 
@@ -362,7 +367,8 @@ def main():
             break
         else:
             print("Invalid choice, please try again.")
-
+run program 
 main()
+
 
 
