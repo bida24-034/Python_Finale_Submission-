@@ -77,7 +77,7 @@
 
 #  TEST 14: Sort by Average with Empty Gradebook
 # Input: " "
-# Expected:raises EmptyGradebookError → “No students found!”
+# Expected:raises EmptyGradebookError “No students found!”
 # Result: Continue
 
 #  TEST 15: Display Results with Students
@@ -369,6 +369,7 @@ def main():
             print("Invalid choice, please try again.")
 run program 
 main()
+
 
 
 
