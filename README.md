@@ -65,21 +65,13 @@ Added robust error handling with custom exceptions, plus sorting and searching a
 -**Use the menu options to:
 
 1.Add a student
-
 2.Update student grades
-
 3.Remove a student
-
 4.View grades by subject
-
 5.Search for a student
-
 6.Sort by average
-
 7.Sort by subject
-
 8.Sort by name
-
 9.Display results
 
 -**Exit the Program
@@ -102,9 +94,13 @@ Enter Science grade between 0 and 100: 70
 Student added!
 
 Input student name: Arifa
+
 Enter Math grade between 0 and 100: 50
+
 Enter English grade between 0 and 100: 60
+
 Enter Science grade between 0 and 100: 40
+
 Student added!
 
 1= Add Student 
@@ -118,66 +114,103 @@ Student added!
 9= Display results
 
 Enter choice 1-8: 1
+
 Enter name of student: Charlie 
+
 Enter Math grade between 0 and 100: 27
+
 Enter English grade between 0 and 100: 99
+
 Enter Science grade between 0 and 100: 60
+
 Student added !
 
 Enter choice 1-8: 1
+
 Enter name of student: lemy 
+
 Enter Math grade between 0 and 100: 30
+
 Enter English grade between 0 and 100: 20
+
 Enter Science grade between 0 and 100: 10
+
 Student added !
 
 Enter choice 1-8: 2
+
 Enter name of student: Charlie 
+
 Enter Math grade between 0 and 100: 45
+
 Enter English grade between 0 and 100: 67
+
 Enter Science grade between 0 and 100: 89
+
 Student updated !
 
 Enter choice 1-8: 3
-Enter name of student: Charlie  
+
+Enter name of student: Charlie 
+
 Student Removed!
 
 Enter choice 1-8: 4
-Enter name of subject:English 
+
+Enter name of subject:English
+
 Shannel: English 90
+
 Arifa: English 60
 
 Enter choice 1-8: 5
+
 Enter name of student:Shannel
+
 Shannel: {'Math': 80, 'English': 90, 'Science': 70}, Avg: 80.0
 
 Enter choice 1-8: 6
+
 Students sorted by average:
+
 Shannel: 80.0
 Arifa: 50.0
 Lemy: 20.0
 
 Enter choice 1-8: 7
+
 Subject: Math
+
 Students sorted by Math:
+
 Shannel: 80.0
 Arifa: 50.0
 Lemy: 30.0
 
 Enter choice 1-8: 8
+
 Students sorted by Name:
+
 Arifa:{'Math': 50, 'English': 60, 'Science': 40}, Avg: 50.0 
+
 Lemy: {'Math': 30, 'English': 20, 'Science': 10}, Avg: 20.0
+
 Shannel: {'Math': 80, 'English': 90, 'Science': 70}, Avg: 80.0
 
 Enter choice 1-8: 9
+
 Shannel: {'Math': 80, 'English': 90, 'Science': 70}, Avg: 80.0
+
 Arifa: {'Math': 50, 'English': 60, 'Science': 40}, Avg: 50.0
+
 Lemy: {'Math': 30, 'English': 20, 'Science': 10}, Avg: 20.0
 
 Class avg: 50.0
+
 Math: Max=80, Min=30
+
 English: Max=90, Min=20
+
 Science: Max=70, Min=10
 
 
