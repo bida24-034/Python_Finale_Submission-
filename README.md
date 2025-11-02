@@ -1,12 +1,12 @@
 # Python_Finale_Submission
 
-## Project Overview
+# Project Overview
 
 The Student Grade Management System is a Python  application designed for managing student grades . It allows users to insert, edit, delete, and search for students; provide grade tracking across multiple subjects, calculate averages, and list students based on name, subject, and overall performance.
 
 This system developed continuosly, starting with basic input processing and loops at section A and B, moved on to lists at section C, at section D dictionaries, and functions at section E, and finally object-oriented programming and exception handling in Section F. The resulting program is robust, user-friendly, and extensively tested with respect to invalid inputs, duplicate entries, and empty data sets.
 
-## Objectives
+# Objectives
 
 -**Digital Grade Management: Provide a system to store and manage student grades .
 -**Create , delete, update and read  Operations: Enable users to Create, Read, Update, and Delete student records.
@@ -16,7 +16,7 @@ This system developed continuosly, starting with basic input processing and loop
 -**Modular & Maintainable Code: Use functions, classes, and clear code structure for easy readability and maintenance.
 -**Testing: Verify that all functionalities work correctly through multiple test cases for normal and edge cases.
 
-## Section Descriptions and Integration
+# Section Descriptions and Integration
 
 **Section A – Scalar Input & Loops
 Introduced simple input handling, validation, and loops to collect class size, student names and grade for one subject to give  total of grades nd class average.This sets the foundation for managing data.
@@ -36,14 +36,14 @@ Converted previous procedural code into object-oriented programming with Student
 **Section F – Exceptions & Algorithms
 Added robust error handling with custom exceptions, plus sorting and searching algorithms. This ensures reliability and handles edge cases. Section F integrates all prior sections into a complete, functional grade management system.Builds on section E and is the final intergrated code and well developed .
 
-## How to Run the Program (PyCharm IDE)
+# How to Run the Program (PyCharm IDE)
 
 -**Make sure a Python IDE environment is installed on your computer.
 -**Recommended: Latest version of PyCharm .
 -**Open the folder containing the program.
 -**It should open directly in PyCharm.
 
- # Run the program by either:
+ ## Run the program by either:
 
 - **Selecting Run → ‘Shannel_Selogilwe_SectionF.py’ Or pressing Shift + F10.
 -**Follow the Prompts
@@ -156,29 +156,39 @@ English: Max=90, Min=20
 Science: Max=70, Min=10
 
 
-## Assumptions ( assumed the following are true):
+# Assumptions ( assumed the following are true):
 
 -**Unique Student Names: Each student must have a unique name which mean duplicate names are not allowed.
+
 -**Grade Range: Grades are assumed to be numeric values between 0 and 100 anything other than that is not accepted .
+
 -**Subjects are fixed: The subjects are predefined as Math, English, and Science which mean we cannot add subjects of our own.
+
 -**Class Size: The user inputs the number of students at the start this must be a positive integer.
+
 -**The menu only has 9 options : only choose between 1 and 9 if not then user is told to try again. 
 
-## Limitations ( my program cannot ) :
+# Limitations ( my program cannot ) :
 
 -**No Persistence: Student data is stored in memory only. Exiting the program will lose all entered data.
 -**Case Sensitivity: Student names are case-sensitive when searching or updating (John ≠ john).
 
-## Testing Summary:
+# Testing Summary:
 
-# The system was tested under multiple scenarios including:
+## The system was tested under multiple scenarios including:
 
 -**Normal input
+
 -**Invalid grades
+
 -**Duplicate students
+
 -**Non-existent students
+
 -**Empty gradebook
+
 -**Updating grades
+
 -**Sorting by average, subject, and name
 
  All tests continued successfully, confirming correct behavior for all functionalities.
@@ -186,6 +196,9 @@ Science: Max=70, Min=10
 ## Special Instructions:
 
 -**Run Environment: Requires  PyCharm and must be the latest version.
+
 -**Menu Navigation: Use numeric options (1–9) to navigate the menu.
+
 -**Ending the Program: Option 9 displays all results and exits automatically.
+
 -**Correct Input Types: Always enter numeric grades and valid menu options. Invalid types will trigger error messages.
