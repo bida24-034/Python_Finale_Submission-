@@ -64,17 +64,17 @@ Added robust error handling with custom exceptions, plus sorting and searching a
 
 -**Use the menu options to:
 
-1.Add a student
-2.Update student grades
-3.Remove a student
-4.View grades by subject
-5.Search for a student
-6.Sort by average
-7.Sort by subject
-8.Sort by name
-9.Display results
+1=Add a student
+2=Update student grades
+3=Remove a student
+4=View grades by subject
+5=Search for a student
+6=Sort by average
+7=Sort by subject
+8=Sort by name
+9=Display results
 
--**Exit the Program
+-**Exiting the Program
 
 Choose option 9 to display all results and automatically end the program.
 
@@ -225,6 +225,12 @@ English: Max=90, Min=20
 Science: Max=70, Min=10
 
 
+# Limitations ( my program cannot ) :
+
+-**No Persistence: Student data is stored in memory only. Exiting the program will lose all entered data.
+
+-**Case Sensitivity: Student names are case-sensitive when searching or updating (John ≠ john).
+
 
 # Assumptions ( assumed the following are true):
 
@@ -238,30 +244,6 @@ Science: Max=70, Min=10
 
 -**The menu only has 9 options : only choose between 1 and 9 if not then user is told to try again. 
 
-# Limitations ( my program cannot ) :
-
--**No Persistence: Student data is stored in memory only. Exiting the program will lose all entered data.
--**Case Sensitivity: Student names are case-sensitive when searching or updating (John ≠ john).
-
-# Testing Summary:
-
-## The system was tested under multiple scenarios including:
-
--**Normal input
-
--**Invalid grades
-
--**Duplicate students
-
--**Non-existent students
-
--**Empty gradebook
-
--**Updating grades
-
--**Sorting by average, subject, and name
-
- All tests continued successfully, confirming correct behavior for all functionalities.
 
 ## Special Instructions:
 
@@ -271,4 +253,4 @@ Science: Max=70, Min=10
 
 -**Ending the Program: Option 9 displays all results and exits automatically.
 
--**Correct Input Types: Always enter numeric grades and valid menu options. Invalid types will trigger error messages.
+-**Correct Input Types: Always enter numeric grades and valid menu options. Invalid types will trigger error message.
