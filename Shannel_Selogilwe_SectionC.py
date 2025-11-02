@@ -1,19 +1,22 @@
 # SECTION C
 
+# prompt for number of students 
 total_students = int(input("Enter total number of students in a class: "))
 total_grades = 0
 
 
-
+# Predifined subjects 
 subjects = ["Math", "English", "Science"]
+#dictionary for all students 
 students = {}  
 
-
+#collect student details and grades 
 for i in range(total_students):
     name = input("Enter the name of student: ")
     grades = {}
     student_total = 0
 
+    #input validation 
     for subject in subjects:
         grade = float(input(f"Enter {subject} grade between 0 and 100: "))
         while grade < 0 or grade > 100:
@@ -50,6 +53,8 @@ while add_more == "yes":
     add_more = input("Add another student? (yes/no): ")
 
 print()
+
+#display all student grades and averages 
 print("Student Grades, Averages, and Summary:")
 
 for student, records in students.items():
@@ -61,11 +66,13 @@ for student, records in students.items():
     print(f"Average: {average:}")
     print()
 
+#class average 
 average = total_grades / (len(students) * len(subjects))
 print("Total of all grades:", total_grades)
 print("Class average:", average)
 print()
 
+# extend the dictionary to handle multiple subjects and allow viewing of grades per subject 
 print("Highest and lowest grades per subject:")
 for subject in subjects:
     scores = [s["grades"][subject] for s in students.values()]
@@ -118,7 +125,7 @@ if remove == "yes":
             break
 
 print()
-# View subject-specific grades
+# View subject-specific grades for all students 
 view = input("Would you like to view grades for a subject? (yes/no): ")
 if view == "yes":
     while True:
@@ -135,7 +142,7 @@ if view == "yes":
             break
 
 print()
-# Search student
+# Search student for data accessing to retrive specific student grades and averages 
 if input("Would you like to search for a student? (yes/no): ") == "yes":
     while True:
         search_name = input("Enter student's name: ").strip()
@@ -152,3 +159,4 @@ if input("Would you like to search for a student? (yes/no): ") == "yes":
         another = input("Search another student? (yes/no): ").strip()
         if another != "yes":
             break
+
