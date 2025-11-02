@@ -115,7 +115,7 @@ Student added!
 8= SortByName
 9= Display results
 
-Enter choice 1-8: 1
+Enter choice 1-9: 1
 
 Enter name of student: Charlie 
 
@@ -128,7 +128,7 @@ Enter Science grade between 0 and 100: 60
 Student added !
 
 
-Enter choice 1-8: 1
+Enter choice 1-9: 1
 
 Enter name of student: lemy 
 
@@ -141,7 +141,7 @@ Enter Science grade between 0 and 100: 10
 Student added !
 
 
-Enter choice 1-8: 2
+Enter choice 1-9: 2
 
 Enter name of student: Charlie 
 
@@ -154,14 +154,14 @@ Enter Science grade between 0 and 100: 89
 Student updated !
 
 
-Enter choice 1-8: 3
+Enter choice 1-9: 3
 
 Enter name of student: Charlie 
 
 Student Removed!
 
 
-Enter choice 1-8: 4
+Enter choice 1-9: 4
 
 Enter name of subject:English
 
@@ -170,14 +170,14 @@ Shannel: English 90
 Arifa: English 60
 
 
-Enter choice 1-8: 5
+Enter choice 1-9: 5
 
 Enter name of student:Shannel
 
 Shannel: {'Math': 80, 'English': 90, 'Science': 70}, Avg: 80.0
 
 
-Enter choice 1-8: 6
+Enter choice 1-9: 6
 
 Students sorted by average:
 
@@ -186,7 +186,7 @@ Arifa: 50.0
 Lemy: 20.0
 
 
-Enter choice 1-8: 7
+Enter choice 1-9: 7
 
 Subject: Math
 
@@ -197,7 +197,7 @@ Arifa: 50.0
 Lemy: 30.0
 
 
-Enter choice 1-8: 8
+Enter choice 1-9: 8
 
 Students sorted by Name:
 
@@ -208,7 +208,7 @@ Lemy: {'Math': 30, 'English': 20, 'Science': 10}, Avg: 20.0
 Shannel: {'Math': 80, 'English': 90, 'Science': 70}, Avg: 80.0
 
 
-Enter choice 1-8: 9
+Enter choice 1-9: 9
 
 Shannel: {'Math': 80, 'English': 90, 'Science': 70}, Avg: 80.0
 
